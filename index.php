@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Hello Out there</title>
+    <!--Style -->
     <style media="screen">
       pre {
         line-height: 1.7em;
@@ -23,10 +24,14 @@
     <p>Hello out there... I live</p>
     <p>-Bryn</p>
     <?php
+    /*Displays students ontop a webpage*/
+
+      /*Including the student class and functions*/
       include('Student.php');
 
+      /*Empty array of students to be added to*/
       $students = array();
-
+      /*Adding first student to array*/
       $first = new Student();
       $first->surname = "Doe";
       $first->first_name = "John";
@@ -36,7 +41,7 @@
       $first->add_grade(75);
       $first->add_grade(55);
       $students['j123'] = $first;
-
+      /*adding another student*/
       $second = new Student();
       $second->surname = "Einstein";
       $second->first_name = "Albert";
@@ -48,6 +53,8 @@
       $second->add_grade(50);
       $students['a456'] = $second;
 
+
+      /*Adding self as student*/
       $third = new Student();
       $third->surname = "Beaudry";
       $third->first_name = "Bryn";
