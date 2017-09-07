@@ -6,7 +6,7 @@
 */
 class Student
 {
-  function __construct($argument)
+  function __construct()
   {
     $this->surname = '';
     $this->first_name = '';
@@ -20,6 +20,14 @@ class Student
 
   function add_grade($grade) {
     $this->grades[] = $grade;
+  }
+
+  function average() {
+    $total = 0;
+    foreach ($this->grades as $value) {
+      $total += $value;
+    }
+    return $total /count($this->grades);
   }
 
   function toString() {
